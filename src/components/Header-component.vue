@@ -84,12 +84,11 @@ import { RouterLink } from 'vue-router'
 const isMenuOpen = ref(false)
 
 const navItems = [
-  { label: 'About', to: '/about' },
-  { label: 'BLUEWAVE', to: '/bluewave' },
   { label: 'Services', to: '/services' },
-  { label: 'Our References', to: '/references' },
+  { label: 'AMS', to: '/bluewave' },
   { label: 'Partners', to: '/partners' },
-  { label: 'Events', to: '/events' },
+  { label: 'Our References', to: '/references' },
+  { label: 'About', to: '/about' },
   { label: 'Contact', to: '/contact' },
 ]
 </script>

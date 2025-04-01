@@ -4,4 +4,18 @@
   --ety-light-blue: #3A7CA5;
   --ety-cyan:      #81C3D7;
   --ety-gray:      #D9DCD6;
+  --ety-text-light: #F5F9FA;
+  --ety-text-heading: #FFFFFF;
+}
+
+.text-ety-gray {
+  color: var(--ety-gray);
+}
+
+.text-ety-light {
+  color: var(--ety-text-light);
+}
+
+.text-ety-cyan {
+  color: var(--ety-cyan);
 }

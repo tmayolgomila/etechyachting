@@ -1,3 +1,122 @@
 <template>
-  <h1>Partners</h1>
+  <section
+    class="partners-section py-5 min-vh-100 d-flex align-items-center"
+    :style="{ backgroundColor: 'var(--ety-light-blue)' }"
+  >
+    <div class="container">
+      <h2 class="text-center text-white fw-bold text-uppercase mb-5" data-aos="fade-up">
+        Our Trusted Partners
+      </h2>
+      <div class="row g-4 justify-content-center">
+        <div
+          v-for="(partner, index) in partners"
+          :key="index"
+          class="col-6 col-sm-4 col-md-4 col-lg-3"
+          data-aos="zoom-in"
+          :data-aos-delay="index * 100"
+        >
+          <div class="partner-card position-relative text-center p-4 rounded-4 h-100">
+            <img :src="partner.logo" :alt="partner.name" class="img-fluid partner-logo mb-3" />
+            <h6 class="fw-bold text-white mb-2">{{ partner.name }}</h6>
+            <p class="small text-ety-light m-0">{{ partner.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
+
+<script setup>
+import { onMounted, ref } from 'vue'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+onMounted(() => {
+  AOS.init({ duration: 800, once: true })
+})
+
+const partners = ref([
+  {
+    name: 'ASEA Power Systems',
+    logo: new URL('@/assets/partners/asea-logo.png', import.meta.url).href,
+    description: 'Leading global provider of shore power converters and voltage regulators.',
+  },
+  {
+    name: 'WAGO',
+    logo: new URL('@/assets/partners/wago-logo.webp', import.meta.url).href,
+    description: 'Versatile automation technology using open standards for marine systems.',
+  },
+
+  {
+    name: 'DEIF',
+    logo: new URL('@/assets/partners/deif-logo.png', import.meta.url).href,
+    description: 'Compact energy control systems designed without PLCs for marine applications.',
+  },
+
+  {
+    name: 'EATON',
+    logo: new URL('@/assets/partners/eaton-logo.jpg', import.meta.url).href,
+    description:
+      'SmartWire-DT enabled partner, creators of the BLUEWAVE™ intelligent switchboards.',
+  },
+  {
+    name: 'EDITRON (Danfoss)',
+    logo: new URL('@/assets/partners/editron.svg', import.meta.url).href,
+    description: 'Electric drivetrain systems for efficient, durable marine propulsion.',
+  },
+  {
+    name: 'Lumishore',
+    logo: new URL('@/assets/partners/lumishore-logo.jpg', import.meta.url).href,
+    description: 'Innovators in high-end underwater lighting for luxury yachts.',
+  },
+  {
+    name: 'Consilium',
+    logo: new URL('@/assets/partners/consilium-logo.jpg', import.meta.url).href,
+    description: 'Experts in onboard fire and gas safety systems.',
+  },
+  {
+    name: 'Yachtica',
+    logo: new URL('@/assets/partners/yachtica-logo.jpg', import.meta.url).href,
+    description: 'Advanced control systems for lighting and comfort at sea.',
+  },
+  {
+    name: 'STP Palma',
+    logo: new URL('@/assets/partners/stp-logo.png', import.meta.url).href,
+    description: 'Europe’s leading refit shipyard supporting vessels up to 120 meters.',
+  },
+])
+</script>
+
+<style scoped>
+.partner-card {
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.3s ease;
+  overflow: hidden;
+  height: 100%;
+  cursor: default;
+  min-height: 300px;
+}
+
+.partner-logo {
+  max-height: 80px;
+  filter: grayscale(100%) brightness(1.2);
+  transition: transform 0.3s ease;
+}
+
+.partner-card:hover .partner-logo {
+  transform: scale(1.05);
+  filter: none;
+}
+
+.text-ety-light {
+  color: var(--ety-text-light);
+}
+
+
+@media (max-width: 768px) {
+  .partner-logo {
+    filter: none !important;
+  }
+}
+</style>

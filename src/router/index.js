@@ -32,11 +32,6 @@ const routes = [
     component: () => import('@/views/Partners-view.vue'),
   },
   {
-    path: '/events',
-    name: 'Events',
-    component: () => import('@/views/Events-view.vue'),
-  },
-  {
     path: '/contact',
     name: 'Contact',
     component: () => import('@/views/Contact-view.vue'),
@@ -46,6 +41,10 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior() {
+    // Esto asegura que cada vez que cambias de ruta, empieza desde arriba
+    return { top: 0 }
+  },
 })
 
 export default router
