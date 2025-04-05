@@ -27,8 +27,6 @@
 import { onMounted } from 'vue'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { useScrollToNext } from '@/stores/useScrollToNext'
-useScrollToNext('/', '/services')
 
 onMounted(() => {
   AOS.init({

@@ -41,10 +41,6 @@ const routes = [
 const router = createRouter({
   history: createWebHistory(),
   routes,
-  scrollBehavior() {
-    // Esto asegura que cada vez que cambias de ruta, empieza desde arriba
-    return { top: 0 }
-  },
 })
 
 export default router

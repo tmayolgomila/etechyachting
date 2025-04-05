@@ -10,7 +10,7 @@
         :key="index"
         class="row align-items-center mb-5 flex-column flex-md-row"
         :class="{ 'flex-md-row-reverse': index % 2 !== 0 }"
-        :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
+        :data-aos="getAosDirection(index)"
       >
         <!-- Image -->
         <div class="col-md-6 mb-3 mb-md-0">
@@ -44,12 +44,14 @@ import pmsImg from '@/assets/services/pms.jpg'
 import lightingImg from '@/assets/services/lighting.jpg'
 import testingImg from '@/assets/services/testing.jpg'
 
-import { useScrollToNext } from '@/stores/useScrollToNext'
-useScrollToNext('/services', '/bluewave')
-
 onMounted(() => {
   AOS.init({ duration: 1000, once: false, mirror: true })
 })
+
+const getAosDirection = (index) => {
+  if (window.innerWidth < 768) return 'fade-up'
+  return index % 2 === 0 ? 'fade-right' : 'fade-left'
+}
 
 const services = ref([
   {
