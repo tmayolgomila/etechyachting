@@ -37,6 +37,12 @@ onMounted(() => {
 
 const partners = ref([
   {
+    name: 'Auto Maskin',
+    logo: new URL('@/assets/partners/automaskin.png', import.meta.url).href,
+    description:
+      'Norwegian leader in advanced engine control and monitoring systems for marine and power generation industries. Trusted for performance, safety, and reliability.',
+  },
+  {
     name: 'ASEA Power Systems',
     logo: new URL('@/assets/partners/asea-logo.png', import.meta.url).href,
     description: 'Leading global provider of shore power converters and voltage regulators.',
@@ -61,7 +67,7 @@ const partners = ref([
   },
   {
     name: 'EDITRON (Danfoss)',
-    logo: new URL('@/assets/partners/editron.svg', import.meta.url).href,
+    logo: new URL('@/assets/partners/editron.png', import.meta.url).href,
     description: 'Electric drivetrain systems for efficient, durable marine propulsion.',
   },
   {
@@ -112,7 +118,6 @@ const partners = ref([
 .text-ety-light {
   color: var(--ety-text-light);
 }
-
 
 @media (max-width: 768px) {
   .partner-logo {
