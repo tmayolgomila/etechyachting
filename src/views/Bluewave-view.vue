@@ -1,5 +1,6 @@
 <template>
-  <section class="bluewave-section py-5 text-white text-center" :style="{ backgroundImage: 'var(--gradient-ety-gray-blue)' }">
+  <section class="bluewave-section py-5 text-white text-center"
+    :style="{ backgroundImage: 'var(--gradient-ety-gray-blue)' }">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-10">
@@ -18,11 +19,12 @@
             vessels.
           </p>
 
-          <div class="mt-2" data-aos="fade-up" data-aos-delay="300">
+          <div class="mt-2 d-none d-md-block" data-aos="fade-up" data-aos-delay="300">
             <a href="http://demo.etybluewave.com/in.php" target="_blank" class="btn btn-outline-light btn-lg px-4">
               Visit our demo
             </a>
           </div>
+
 
           <!-- Aquí envolvemos InteractiveCard con data-aos -->
           <div class="d-flex justify-content-center mt-2">
