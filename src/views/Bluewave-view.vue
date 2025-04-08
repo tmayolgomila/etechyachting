@@ -1,34 +1,38 @@
 <template>
   <section class="bluewave-section py-5 text-white text-center"
-    :style="{ backgroundImage: 'var(--gradient-ety-gray-blue)' }">
+    :style="{ backgroundImage: 'var(--gradient-ety-dark)' }">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-10">
-          <h2 class="mb-4 fw-bold text-uppercase" data-aos="zoom-in">ETY AMS</h2>
 
-          <p class="lead mb-3" data-aos="fade-up" data-aos-delay="100">
-            E-Tech Yachting’s innovative <strong>BLUEWAVE™</strong> series comprises smart
-            switchboards and alarm monitoring systems that have revolutionized the marine industry
-            since their inception.
+          <!-- TÍTULO -->
+          <h2 class="mb-4 fw-bold text-uppercase" data-aos="zoom-in">
+            BLUEWAVE™ AMS
+          </h2>
+
+          <!-- DESCRIPCIÓN -->
+          <p class="lead text-ety-light mb-3" data-aos="fade-up" data-aos-delay="100">
+            Meet <strong>BLUEWAVE™</strong>, the advanced Alarm Monitoring System designed by E-Tech Yachting to provide
+            real-time system awareness, fail-safe alerts, and seamless onboard integration.
           </p>
 
-          <p data-aos="fade-up" data-aos-delay="200">
-            As the first European company in the marine industry to become an
-            <strong>EATON Authorized Lean Solutions Partner</strong>, E-Tech Yachting demonstrates
-            its commitment to delivering cutting-edge electrical solutions for yachts and marine
-            vessels.
+          <p class="text-ety-light" data-aos="fade-up" data-aos-delay="200">
+            As the <strong>first European company</strong> in the marine industry to become an
+            <strong>EATON Authorized Lean Solutions Partner</strong>, we combine innovation, trust, and engineering
+            excellence in every panel we build.
           </p>
 
-          <div class="mt-2 d-none d-md-block" data-aos="fade-up" data-aos-delay="300">
-            <a href="http://demo.etybluewave.com/in.php" target="_blank" class="btn btn-outline-light btn-lg px-4">
-              Visit our demo
+          <!-- BOTÓN DEMO -->
+          <div class="mt-4 d-none d-md-inline-flex justify-content-center" data-aos="fade-up" data-aos-delay="300">
+            <a href="http://demo.etybluewave.com/in.php" target="_blank"
+              class="btn btn-outline-light btn-lg px-4 rounded-pill d-inline-flex align-items-center gap-2">
+              <i class="bi bi-play-circle"></i> Visit Live Demo
             </a>
           </div>
 
-
-          <!-- Aquí envolvemos InteractiveCard con data-aos -->
-          <div class="d-flex justify-content-center mt-2">
-            <div class="interactive-card-wrapper" data-aos="fade-up" data-aos-delay="400">
+          <!-- INTERACTIVE CARD intacto -->
+          <div class="d-flex justify-content-center mt-5">
+            <div data-aos="fade-up" data-aos-delay="400">
               <InteractiveCard />
             </div>
           </div>
@@ -38,7 +42,6 @@
     </div>
   </section>
 </template>
-
 
 <script setup>
 import { onMounted } from 'vue'
@@ -54,5 +57,7 @@ onMounted(() => {
 <style scoped>
 .bluewave-section {
   min-height: 100vh;
+  background-size: cover;
+  background-position: center;
 }
 </style>

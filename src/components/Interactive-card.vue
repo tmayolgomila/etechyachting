@@ -19,7 +19,7 @@
       @mouseleave="resetTilt"
     >
       <img
-        src="/src/assets/ams.png"
+        src="/src/assets/ams/ams.png"
         alt="Mockup AMS"
         class="img-fluid rounded-4 shadow-lg mockup-img"
         style="width: 100%; height: auto"

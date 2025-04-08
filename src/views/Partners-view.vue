@@ -6,7 +6,7 @@
         Our Trusted Partners
       </h2>
       <div class="row g-4 justify-content-center">
-        <div v-for="(partner, index) in partners" :key="index" class="col-6 col-sm-4 col-md-4 col-lg-3"
+        <div v-for="(partner, index) in partners" :key="index" class="col-12 col-sm-6 col-md-4 col-lg-3"
           data-aos="zoom-in" :data-aos-delay="index * 100">
           <div class="partner-card position-relative text-center p-4 rounded-4 h-100">
             <img :src="partner.logo" :alt="partner.name" class="img-fluid partner-logo mb-3" />
@@ -95,6 +95,8 @@ const partners = ref([
   height: 100%;
   cursor: default;
   min-height: 300px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+
 }
 
 .partner-logo {

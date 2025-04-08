@@ -54,7 +54,7 @@ onMounted(() => {
 .overlay {
   position: absolute;
   inset: 0;
-  background-image: var(--gradient-ety-skin2);
+  background-image: var(--gradient-ety-dark);
   z-index: 0;
 }
 

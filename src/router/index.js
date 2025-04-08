@@ -12,6 +12,11 @@ const routes = [
     component: () => import('@/views/About-view.vue'),
   },
   {
+    path: '/asea',
+    name: 'ASEA distriutor',
+    component: () => import('@/views/Asea-view.vue'),
+  },
+  {
     path: '/bluewave',
     name: 'BLUEWAVE',
     component: () => import('@/views/Bluewave-view.vue'),
