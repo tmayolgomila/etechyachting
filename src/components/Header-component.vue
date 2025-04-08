@@ -1,5 +1,5 @@
 <template>
-  <header class="sticky-top shadow-sm" :style="{ backgroundColor: 'var(--ety-dark-blue)' }">
+  <header class="sticky-top shadow-sm" :style="{ background: 'var(--ety-dark-blue)' }">
     <div
       class="container-fluid d-flex justify-content-between align-items-center py-3 px-4 position-relative"
     >

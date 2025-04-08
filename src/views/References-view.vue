@@ -1,17 +1,13 @@
 <template>
-  <section class="references-section py-5" :style="{ backgroundColor: 'var(--ety-mid-blue)' }">
+  <section class="references-section py-5" :style="{ backgroundImage: 'var(--gradient-ety-gray-blue)' }">
     <div class="container">
       <h2 class="text-center text-white fw-bold text-uppercase mb-5" data-aos="fade-up">
         Our References
       </h2>
 
-      <div
-        v-for="(ref, index) in references"
-        :key="index"
+      <div v-for="(ref, index) in references" :key="index"
         class="reference-card mb-5 d-flex flex-column flex-lg-row align-items-center gap-4"
-        :class="{ 'flex-lg-row-reverse': index % 2 !== 0 }"
-        :data-aos="getAosDirection(index)"
-      >
+        :class="{ 'flex-lg-row-reverse': index % 2 !== 0 }" :data-aos="getAosDirection(index)">
         <!-- Image -->
         <div class="col-lg-6">
           <img :src="ref.image" :alt="ref.name" class="img-fluid rounded-4 shadow-sm w-100" />

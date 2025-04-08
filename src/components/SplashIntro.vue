@@ -1,10 +1,8 @@
 <template>
   <transition name="fade">
-    <div
-      v-if="show"
+    <div v-if="show"
       class="position-fixed top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-white"
-      style="background-color: var(--ety-dark-blue); z-index: 9999"
-    >
+      style="background-image: var(--gradient-ety-blue); z-index: 9999">
       <img src="@/assets/ety-logo.png" alt="ETY Logo" class="mb-3" style="width: clamp(160px, 20vw, 300px);" />
       <h5 class="text-uppercase tracking-in-expand">Electrical Engineering Systems</h5>
     </div>
@@ -30,6 +28,7 @@ onMounted(() => {
 .fade-leave-active {
   transition: opacity 1s ease;
 }
+
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
@@ -44,9 +43,11 @@ onMounted(() => {
     letter-spacing: -0.5em;
     opacity: 0;
   }
+
   40% {
     opacity: 0.6;
   }
+
   100% {
     letter-spacing: normal;
     opacity: 1;

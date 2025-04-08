@@ -1,20 +1,13 @@
 <template>
-  <section
-    class="partners-section py-5 min-vh-100 d-flex align-items-center"
-    :style="{ backgroundColor: 'var(--ety-light-blue)' }"
-  >
+  <section class="partners-section py-5 min-vh-100 d-flex align-items-center"
+    :style="{ backgroundImage: 'var(--gradient-ety-gray-blue)' }">
     <div class="container">
       <h2 class="text-center text-white fw-bold text-uppercase mb-5" data-aos="fade-up">
         Our Trusted Partners
       </h2>
       <div class="row g-4 justify-content-center">
-        <div
-          v-for="(partner, index) in partners"
-          :key="index"
-          class="col-6 col-sm-4 col-md-4 col-lg-3"
-          data-aos="zoom-in"
-          :data-aos-delay="index * 100"
-        >
+        <div v-for="(partner, index) in partners" :key="index" class="col-6 col-sm-4 col-md-4 col-lg-3"
+          data-aos="zoom-in" :data-aos-delay="index * 100">
           <div class="partner-card position-relative text-center p-4 rounded-4 h-100">
             <img :src="partner.logo" :alt="partner.name" class="img-fluid partner-logo mb-3" />
             <h6 class="fw-bold text-white mb-2">{{ partner.name }}</h6>

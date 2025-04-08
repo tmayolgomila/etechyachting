@@ -41,6 +41,6 @@ onMounted(() => {
 <style scoped>
 .hero {
   min-height: 100vh;
-  background-color: var(--ety-mid-blue);
+  background: var(--ety-mid-blue);
 }
 </style>

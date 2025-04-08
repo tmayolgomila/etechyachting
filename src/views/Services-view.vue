@@ -1,36 +1,38 @@
 <template>
-  <section class="services-section py-5" :style="{ backgroundColor: 'var(--ety-mid-blue)' }">
+  <section class="services-section py-5" :style="{ backgroundImage: 'var(--gradient-ety-gray-blue)' }">
     <div class="container">
       <h2 class="text-center text-white fw-bold text-uppercase mb-5" data-aos="fade-up">
         Our Services
       </h2>
 
-      <div
-        v-for="(service, index) in services"
-        :key="index"
-        class="row align-items-center mb-5 flex-column flex-md-row"
-        :class="{ 'flex-md-row-reverse': index % 2 !== 0 }"
-        :data-aos="getAosDirection(index)"
-      >
-        <!-- Image -->
-        <div class="col-md-6 mb-3 mb-md-0">
-          <div
-            class="service-image rounded-4 shadow-sm"
-            :style="{ backgroundImage: `url('${service.image}')` }"
-          ></div>
-        </div>
+      <div v-for="(service, index) in services" :key="index" class="row justify-content-center mb-5"
+        :data-aos="getAosDirection(index)">
+        <div class="col-lg-10">
+          <div class="d-flex flex-column flex-md-row align-items-center service-card shadow-lg rounded-4 p-4"
+            :class="{ 'flex-md-row-reverse': index % 2 !== 0 }">
+            <!-- Imagen sin col-md-6 -->
+            <div class="service-image-wrapper mb-4 mb-md-0">
+              <div class="service-image rounded-4 shadow-sm" :style="{ backgroundImage: `url('${service.image}')` }">
+              </div>
+            </div>
 
-        <!-- Text -->
-        <div class="col-md-6 text-white">
-          <h4 class="fw-bold mb-3">
-            <i :class="service.icon" class="me-2 text-ety-cyan"></i>{{ service.title }}
-          </h4>
-          <p class="text-ety-light">{{ service.description }}</p>
+            <!-- Texto sin col-md-6 -->
+            <div class="ps-md-4 text-white w-100 text-center text-md-start">
+              <h4 class="fw-bold mb-3">
+                <i :class="service.icon" class="me-2 text-ety-cyan"></i>{{ service.title }}
+              </h4>
+              <p class="text-ety-light mb-3">{{ service.description }}</p>
+
+              <!-- CTA opcional -->
+              <!-- <a href="#" class="btn btn-outline-light btn-sm mt-2">Learn more</a> -->
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 </template>
+
 
 <script setup>
 import { ref, onMounted } from 'vue'
@@ -49,9 +51,12 @@ onMounted(() => {
 })
 
 const getAosDirection = (index) => {
-  if (window.innerWidth < 768) return 'fade-up'
+  if (typeof window !== 'undefined' && window.innerWidth < 768) {
+    return 'fade-up'
+  }
   return index % 2 === 0 ? 'fade-right' : 'fade-left'
 }
+
 
 const services = ref([
   {
@@ -119,12 +124,27 @@ const services = ref([
 </script>
 
 <style scoped>
+.service-image-wrapper {
+  width: 100%;
+}
+
 .service-image {
   width: 100%;
-  height: 300px;
+  height: 250px;
   background-size: cover;
   background-position: center;
   border-radius: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.service-image:hover {
+  transform: scale(1.02);
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .text-ety-cyan {

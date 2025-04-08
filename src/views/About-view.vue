@@ -1,15 +1,13 @@
 <template>
-  <section
-    class="about-section d-flex align-items-center text-white position-relative"
-    :style="{ backgroundImage: `url('${bgImage}')` }"
-  >
+  <section class="about-section d-flex align-items-center text-white position-relative"
+    :style="{ backgroundImage: `url('${bgImage}')` }">
     <div class="overlay"></div>
     <div class="container position-relative">
       <div class="row align-items-center">
         <!-- Text Block -->
         <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
           <h2 class="fw-bold text-uppercase mb-4">About E-Tech Yachting</h2>
-          <h3 class="display-6 fw-semibold text-ety-cyan mb-4">
+          <h3 class="display-6 fw-semibold text-ety-heading mb-4">
             Yachting community’s leading electrical engineering & electronics specialist in Spain
           </h3>
           <p class="lead text-ety-light mb-3">
@@ -25,12 +23,8 @@
 
         <!-- Visual Block -->
         <div class="col-lg-6 text-center" data-aos="fade-left">
-          <img
-            src="@/assets/ETY.jpg"
-            alt="E-Tech Team"
-            class="img-fluid rounded-4 shadow"
-            style="max-height: 500px; object-fit: cover"
-          />
+          <img src="@/assets/ETY.jpg" alt="E-Tech Team" class="img-fluid rounded-4 shadow"
+            style="max-height: 500px; object-fit: cover" />
         </div>
       </div>
     </div>
@@ -60,7 +54,7 @@ onMounted(() => {
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom right, rgba(22, 66, 91, 0.85), rgba(47, 102, 144, 0.85));
+  background-image: var(--gradient-ety-skin2);
   z-index: 0;
 }
 

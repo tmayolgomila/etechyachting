@@ -15,6 +15,31 @@
   --ety-text-heading: #FFFFFF;
 
 
+    /* Degradado principal (oscuro a claro) */
+    --gradient-ety-blue: linear-gradient(135deg, var(--ety-dark-blue), var(--ety-light-blue));
+
+    /* Degradado gris azulado */
+    --gradient-ety-gray-blue: linear-gradient(135deg, var(--ety-light-gray), var(--ety-mid-blue));
+
+    /* Degradado Skin 2: azul intenso a gris claro */
+    --gradient-ety-skin2: linear-gradient(135deg, var(--ety-skin2-dark-blue), var(--ety-skin2-light-gray));
+
+    /* Degradado cian a gris claro */
+    --gradient-ety-cyan-gray: linear-gradient(135deg, var(--ety-cyan), var(--ety-gray));
+
+    /* Degradado para texto o elementos llamativos */
+    --gradient-ety-highlight: linear-gradient(90deg, var(--ety-skin2-dark-blue), var(--ety-cyan), var(--ety-skin2-light-blue));
+
+    /* Degradado suave para fondos */
+    --gradient-ety-soft: linear-gradient(to bottom, var(--ety-light-blue), var(--ety-gray));
+
+    /* Degradado oscuro dramático */
+    --gradient-ety-dark: linear-gradient(to right, var(--ety-dark-blue), var(--ety-mid-blue), var(--ety-light-blue));
+
+    /* Degradado heading a texto claro */
+    --gradient-ety-text: linear-gradient(to right, var(--ety-text-heading), var(--ety-text-light));
+
+
 }
 
 .text-ety-gray {

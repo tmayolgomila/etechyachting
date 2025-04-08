@@ -1,14 +1,16 @@
 <template>
-  <section class="bluewave-section py-5 text-white text-center" :style="{ backgroundColor: 'var(--ety-mid-blue)' }">
+  <section class="bluewave-section py-5 text-white text-center" :style="{ backgroundImage: 'var(--gradient-ety-gray-blue)' }">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-10">
-          <h2 class="mb-4 fw-bold text-uppercase" data-aos="zoom-in">BLUEWAVE™</h2>
+          <h2 class="mb-4 fw-bold text-uppercase" data-aos="zoom-in">ETY AMS</h2>
+
           <p class="lead mb-3" data-aos="fade-up" data-aos-delay="100">
             E-Tech Yachting’s innovative <strong>BLUEWAVE™</strong> series comprises smart
             switchboards and alarm monitoring systems that have revolutionized the marine industry
             since their inception.
           </p>
+
           <p data-aos="fade-up" data-aos-delay="200">
             As the first European company in the marine industry to become an
             <strong>EATON Authorized Lean Solutions Partner</strong>, E-Tech Yachting demonstrates
@@ -16,25 +18,25 @@
             vessels.
           </p>
 
-
-          <div class="mt-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="mt-2" data-aos="fade-up" data-aos-delay="300">
             <a href="http://demo.etybluewave.com/in.php" target="_blank" class="btn btn-outline-light btn-lg px-4">
               Visit our demo
             </a>
           </div>
 
-          <div class="d-flex justify-content-center mt-4">
-            <div class="interactive-card-wrapper">
+          <!-- Aquí envolvemos InteractiveCard con data-aos -->
+          <div class="d-flex justify-content-center mt-2">
+            <div class="interactive-card-wrapper" data-aos="fade-up" data-aos-delay="400">
               <InteractiveCard />
             </div>
           </div>
-
 
         </div>
       </div>
     </div>
   </section>
 </template>
+
 
 <script setup>
 import { onMounted } from 'vue'
