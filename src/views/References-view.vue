@@ -52,13 +52,13 @@ const getAosDirection = (index) => {
 
 const references = ref([
   {
-    name: 'Astralium, 31 Metre',
+    name: 'Lowland Yachts BV, 31 Metre',
     description:
       'ETY carried out the AMS refit of the 31mt Astralium yacht. The project included the installation of a brand new Bluewave AMS and electrical works throughout the vessel, enhancing system reliability and operational efficiency.',
     image: astraliumImg,
   },
   {
-    name: 'Silver Dream, 43 Metre',
+    name: 'Warren Yachts, 43 Metre',
     description:
       'ETY carried out the AMS refit of the 43mt Silver Dream yacht. The scope of work included the installation of a new Bluewave AMS and a complete electrical system upgrade, ensuring seamless integration and enhanced monitoring capabilities.',
     image: mysilverdreamImg,
