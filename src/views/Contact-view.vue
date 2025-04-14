@@ -23,7 +23,7 @@
               <a href="tel:+34971431155" class="text-ety-light">+34 971 43 11 55</a>
             </p>
 
-            <a href="https://www.google.com/maps/place/E+-+Tech+Yachting" target="_blank"
+            <a href="https://www.google.com/maps/dir/?api=1&destination=39.5630188,2.6390849" target="_blank"
               class="btn btn-outline-light text-uppercase rounded-pill px-4 d-inline-flex align-items-center gap-2">
               <i class="bi bi-geo-alt-fill"></i>
               Get Directions
