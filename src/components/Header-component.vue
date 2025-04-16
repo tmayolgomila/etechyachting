@@ -3,7 +3,7 @@
     <div class="container-fluid d-flex justify-content-between align-items-center py-3 px-4 position-relative">
       <!-- Logo -->
       <RouterLink to="/" class="navbar-brand text-white">
-        <img src="@/assets/ety-logo.png" alt="E-Tech Yachting" height="36" />
+        <img src="/images/ety-logo.png" alt="E-Tech Yachting" height="36" />
       </RouterLink>
 
       <!-- Toggle button -->

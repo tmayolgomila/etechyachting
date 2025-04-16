@@ -6,7 +6,7 @@
       </h2>
       <div class="row g-4 justify-content-center">
         <div v-for="(partner, index) in partners" :key="index" class="col-12 col-sm-6 col-md-4 col-lg-3"
-          data-aos="zoom-in" :data-aos-delay="index * 100">
+          data-aos="zoom-in" :data-aos-delay="(index % 4) * 100">
           <div class="partner-card position-relative text-center p-4 rounded-4 h-100">
             <img :src="partner.logo" :alt="partner.name" class="img-fluid partner-logo mb-3" />
             <h6 class="fw-bold text-white mb-2">{{ partner.name }}</h6>
@@ -24,7 +24,7 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 onMounted(() => {
-  AOS.init({ duration: 800, once: true })
+  AOS.init({ duration: 600, once: true })
 })
 
 const partners = ref([
@@ -145,7 +145,7 @@ const partners = ref([
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('/src/assets/stock/partners-pic.jpg');
+  background-image: url('/images/partners-pic.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

@@ -46,7 +46,7 @@ onMounted(() => {
   display: flex;
   align-items: start;
   justify-content: center;
-  background-image: url('/src/assets/stock/splash.jpg');
+  background-image: url('/images/splash.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

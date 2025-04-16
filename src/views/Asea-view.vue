@@ -87,7 +87,7 @@ onMounted(() => {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background-image: url('/src/assets/stock/asea-pic.jpg');
+  background-image: url('/images/asea-pic.jpg');
   /* ⬅️ Tu imagen */
   background-size: cover;
   background-position: center;
