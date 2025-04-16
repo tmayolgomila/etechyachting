@@ -32,6 +32,11 @@ const routes = [
     component: () => import('@/views/References-view.vue'),
   },
   {
+    path: '/jobs',
+    name: 'Work With Us',
+    component: () => import('@/views/Jobs-view.vue'),
+  },
+  {
     path: '/partners',
     name: 'Partners',
     component: () => import('@/views/Partners-view.vue'),
@@ -41,11 +46,29 @@ const routes = [
     name: 'Contact',
     component: () => import('@/views/Contact-view.vue'),
   },
+  {
+    path: '/terms',
+    name: 'Terms and Conditions',
+    component: () => import('@/views/TermsAndConditions-view.vue'),
+  },
+  {
+    path: '/cookies',
+    name: 'Cookies Policy',
+    component: () => import('@/views/CookiePolicy-view.vue'),
+  },
+  {
+    path: '/privacy',
+    name: 'Privacy Policy',
+    component: () => import('@/views/PrivacyPolicy-view.vue'),
+  },
 ]
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
+  scrollBehavior() {
+    return { top: 0 }
+  },
 })
 
 export default router

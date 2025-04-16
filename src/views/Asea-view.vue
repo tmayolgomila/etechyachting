@@ -1,5 +1,5 @@
 <template>
-  <section class="asea-hero text-white py-5" :style="{ backgroundImage: 'var(--gradient-ety-dark)' }">
+  <section class="asea-hero text-white py-5">
     <div class="container text-center">
       <h1 class="fw-bold text-uppercase mb-3">ASEA Power Systems</h1>
       <p class="lead text-ety-light">
@@ -9,11 +9,12 @@
     </div>
   </section>
 
+
   <section class="py-5 bg-light text-dark">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6 mb-4 mb-md-0" data-aos="fade-right">
-          <img src="@/assets/asea/asea-unit.jpg" class="img-fluid rounded shadow" alt="ASEA Power Unit" />
+          <img src="@/assets/asea/converters.png" class="img-fluid rounded shadow" alt="ASEA Power Unit" />
         </div>
         <div class="col-md-6" data-aos="fade-left">
           <h2 class="fw-bold mb-3">Power Without Limits</h2>
@@ -30,6 +31,18 @@
       </div>
     </div>
   </section>
+
+  <section class="asea-video-section py-5 bg-black">
+    <div class="container">
+      <div class="ratio ratio-16x9 rounded overflow-hidden shadow-lg" data-aos="fade-up">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/t4azv5pNR0M?si=1-wskaFvo1imRQZc"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
 
   <section class="py-5 text-white" :style="{ backgroundImage: 'var(--gradient-ety-skin2)' }">
     <div class="container text-center">
@@ -68,10 +81,43 @@ onMounted(() => {
 
 <style scoped>
 .asea-hero {
+  position: relative;
   min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  background-image: url('/src/assets/stock/asea-pic.jpg');
+  /* ⬅️ Tu imagen */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+.asea-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  /* oscurece un poco para contraste */
+  z-index: 0;
+}
+
+.asea-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.asea-video-section {
+  background-color: #000;
+}
+
+.ratio {
+  max-width: 960px;
+  margin: 0 auto;
+  border-radius: 1rem;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
 }
 </style>

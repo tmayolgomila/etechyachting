@@ -56,6 +56,7 @@ const navItems = [
   { label: 'AMS', to: '/bluewave' },
   { label: 'Partners', to: '/partners' },
   { label: 'Our References', to: '/references' },
+  { label: 'Careers', to: '/jobs' },
   { label: 'About', to: '/about' },
   { label: 'Contact', to: '/contact' },
 ]

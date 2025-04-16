@@ -1,6 +1,5 @@
 <template>
-  <section class="partners-section py-5 min-vh-100 d-flex align-items-center"
-    :style="{ backgroundImage: 'var(--gradient-ety-gray-blue)' }">
+  <section class="partners-section py-5 min-vh-100 d-flex align-items-center">
     <div class="container">
       <h2 class="text-center text-white fw-bold text-uppercase mb-5" data-aos="fade-up">
         Our Trusted Partners
@@ -74,6 +73,26 @@ const partners = ref([
     description: 'Experts in onboard fire and gas safety systems.',
   },
   {
+    name: 'Blaunaval',
+    logo: new URL('@/assets/partners/blau-naval.svg', import.meta.url).href,
+    description: 'Leading provider of fluid management and technical supplies for yachts, superyachts, and shipyards across the Mediterranean.',
+  },
+  {
+    name: 'Shore Marine',
+    logo: new URL('@/assets/partners/shore-marine.jpg', import.meta.url).href,
+    description: 'Established in 2004, offering over 90 years of combined yachting experience in TPA, customs, refit projects, and yacht management.',
+  },
+  {
+    name: 'Disvent',
+    logo: new URL('@/assets/partners/disvent.png', import.meta.url).href,
+    description: 'Specialists in electronics, refrigeration, communication, and energy solutions for maritime, industrial, and renewable energy sectors.',
+  },
+  {
+    name: 'Marine Oil',
+    logo: new URL('@/assets/partners/marine-oil.svg', import.meta.url).href,
+    description: 'Specialists in oil and fuel treatment, purification, and contamination control for superyachts, offering tank cleaning, fluid analysis, and preventive maintenance solutions.',
+  },
+  {
     name: 'Yachtica',
     logo: new URL('@/assets/partners/yachtica-logo.jpg', import.meta.url).href,
     description: 'Advanced control systems for lighting and comfort at sea.',
@@ -88,8 +107,8 @@ const partners = ref([
 
 <style scoped>
 .partner-card {
-  background-color: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background-color: rgba(255, 255, 255, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   transition: all 0.3s ease;
   overflow: hidden;
   height: 100%;
@@ -118,5 +137,33 @@ const partners = ref([
   .partner-logo {
     filter: none !important;
   }
+}
+
+.partners-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/src/assets/stock/partners-pic.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+
+
+.partners-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
+  z-index: 0;
+}
+
+.partners-section .container {
+  position: relative;
+  z-index: 2;
 }
 </style>

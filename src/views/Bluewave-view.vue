@@ -1,14 +1,14 @@
 <template>
   <section class="bluewave-section py-5 text-white text-center"
-    :style="{ backgroundImage: 'var(--gradient-ety-dark)' }">
+    :style="{ backgroundImage: 'var(--gradient-ety-gray-blue)' }">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-10">
 
           <!-- TÍTULO -->
-          <h2 class="mb-4 fw-bold text-uppercase" data-aos="zoom-in">
-            BLUEWAVE™ AMS
-          </h2>
+          <div class="mb-4" data-aos="zoom-in">
+            <img src="@/assets/ams/bluewave.png" alt="Bluewave Logo" class="bluewave-logo img-fluid" />
+          </div>
 
           <!-- DESCRIPCIÓN -->
           <p class="lead text-ety-light mb-3" data-aos="fade-up" data-aos-delay="100">
@@ -59,5 +59,17 @@ onMounted(() => {
   min-height: 100vh;
   background-size: cover;
   background-position: center;
+}
+
+.bluewave-logo {
+  max-width: 280px;
+  height: auto;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
+}
+
+@media (max-width: 768px) {
+  .bluewave-logo {
+    max-width: 200px;
+  }
 }
 </style>

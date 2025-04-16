@@ -22,10 +22,8 @@
                 {{ service.title }}
               </h4>
               <p class="text-ety-light mb-3">{{ service.description }}</p>
-
-              <!-- CTA opcional -->
-              <!-- <a href="#" class="btn btn-outline-light btn-sm mt-2">Learn more</a> -->
             </div>
+
           </div>
         </div>
       </div>
