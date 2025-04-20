@@ -5,12 +5,30 @@
         Our Trusted Partners
       </h2>
       <div class="row g-4 justify-content-center">
-        <div v-for="(partner, index) in partners" :key="index" class="col-12 col-sm-6 col-md-4 col-lg-3"
-          data-aos="zoom-in" :data-aos-delay="(index % 4) * 100">
-          <div class="partner-card position-relative text-center p-4 rounded-4 h-100">
-            <img :src="partner.logo" :alt="partner.name" class="img-fluid partner-logo mb-3" />
-            <h6 class="fw-bold text-white mb-2">{{ partner.name }}</h6>
-            <p class="small text-ety-light m-0">{{ partner.description }}</p>
+        <div
+          v-for="(partner, index) in partners"
+          :key="index"
+          class="col-12 col-sm-6 col-md-4 col-lg-3"
+          data-aos="zoom-in"
+          :data-aos-delay="(index % 4) * 100"
+        >
+          <div
+            class="partner-card d-flex flex-column position-relative text-center p-4 rounded-4 h-100"
+          >
+            <div class="flex-grow-1">
+              <img :src="partner.logo" :alt="partner.name" class="img-fluid partner-logo mb-3" />
+              <h6 class="fw-bold text-white mb-2">{{ partner.name }}</h6>
+              <p class="small text-ety-light m-0">{{ partner.description }}</p>
+            </div>
+            <a
+              v-if="partner.url"
+              :href="partner.url"
+              class="btn btn-outline-light btn-sm mt-3 align-self-center"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit Website
+            </a>
           </div>
         </div>
       </div>
@@ -44,13 +62,11 @@ const partners = ref([
     logo: new URL('@/assets/partners/wago-logo.webp', import.meta.url).href,
     description: 'Versatile automation technology using open standards for marine systems.',
   },
-
   {
     name: 'DEIF',
     logo: new URL('@/assets/partners/deif-logo.png', import.meta.url).href,
     description: 'Compact energy control systems designed without PLCs for marine applications.',
   },
-
   {
     name: 'EATON',
     logo: new URL('@/assets/partners/eaton-logo.jpg', import.meta.url).href,
@@ -75,22 +91,30 @@ const partners = ref([
   {
     name: 'Blaunaval',
     logo: new URL('@/assets/partners/blau-naval.svg', import.meta.url).href,
-    description: 'Leading provider of fluid management and technical supplies for yachts, superyachts, and shipyards across the Mediterranean.',
+    description:
+      'Leading provider of fluid management and technical supplies for yachts, superyachts, and shipyards across the Mediterranean.',
+    url: 'https://blaunaval.com',
   },
   {
     name: 'Shore Marine',
     logo: new URL('@/assets/partners/shore-marine.jpg', import.meta.url).href,
-    description: 'Established in 2004, offering over 90 years of combined yachting experience in TPA, customs, refit projects, and yacht management.',
+    description:
+      'Established in 2004, offering over 90 years of combined yachting experience in TPA, customs, refit projects, and yacht management.',
+    url: 'https://www.shoremarinegroup.com/',
   },
   {
     name: 'Disvent',
     logo: new URL('@/assets/partners/disvent.png', import.meta.url).href,
-    description: 'Specialists in electronics, refrigeration, communication, and energy solutions for maritime, industrial, and renewable energy sectors.',
+    description:
+      'Specialists in electronics, refrigeration, communication, and energy solutions for maritime, industrial, and renewable energy sectors.',
+    url: 'https://disvent.com',
   },
   {
     name: 'Marine Oil',
     logo: new URL('@/assets/partners/marine-oil.svg', import.meta.url).href,
-    description: 'Specialists in oil and fuel treatment, purification, and contamination control for superyachts, offering tank cleaning, fluid analysis, and preventive maintenance solutions.',
+    description:
+      'Specialists in oil and fuel treatment, purification, and contamination control for superyachts, offering tank cleaning, fluid analysis, and preventive maintenance solutions.',
+    url: 'https://www.oilfuelcare.com/',
   },
   {
     name: 'Yachtica',
@@ -115,7 +139,8 @@ const partners = ref([
   cursor: default;
   min-height: 300px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-
+  display: flex;
+  flex-direction: column;
 }
 
 .partner-logo {
@@ -153,9 +178,8 @@ const partners = ref([
   overflow: hidden;
 }
 
-
 .partners-section::before {
-  content: "";
+  content: '';
   position: absolute;
   inset: 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3));
