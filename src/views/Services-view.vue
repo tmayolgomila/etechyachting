@@ -58,45 +58,47 @@ const services = ref([
   {
     title: 'Shore Power Converters',
     description:
-      'Partnered with ASEA for eco-efficient shore converters and safe isolation systems.',
+      'Partnered with ASEA for eco-efficient shore converters and safe isolation systems. We supply, install, and maintain frequency and voltage converters adapted to international marina standards, ensuring seamless energy transition and safety onboard.',
     image: aseaImg,
   },
   {
     title: 'Electrical Design & Installations',
     description:
-      'Design and implementation of modular, adaptive electrical systems tailored to vessel size and complexity.',
+      'Design and implementation of modular, adaptive electrical systems tailored to vessel size and complexity. We deliver turnkey installations, retrofit upgrades, and engineering packages fully compliant with class requirements and optimized for performance and reliability.',
     image: electricalImg,
   },
   {
     title: 'Alarm Monitoring Systems (AMS)',
     description:
-      'Custom AMS solutions that integrate with legacy systems for streamlined control and monitoring.',
+      'Custom AMS solutions that integrate with legacy systems for streamlined control and monitoring. Our in-house developed BLUEWAVE™ AMS offers real-time supervision, intuitive touch interfaces, and scalable architecture for yachts of all sizes.',
     image: amsImg,
   },
   {
     title: 'Switchboards, Panels, and Automation',
     description:
-      'BLUEWAVE™ certified panels aligned with DNV and SOLAS standards for seamless integration.',
+      'BLUEWAVE™ certified panels aligned with DNV and SOLAS standards for seamless integration. We engineer and assemble main switchboards, sub-distribution panels, PLC-based control units, and automation solutions tailored to onboard machinery and hotel systems.',
     image: switchboardImg,
   },
   {
     title: 'Power Management Systems',
     description:
-      'Advanced diagnostics using thermal imaging and analyzers to identify and resolve energy issues.',
+      'Advanced diagnostics using thermal imaging and analyzers to identify and resolve energy issues. We configure and fine-tune power management logic to maximize efficiency, reduce generator load cycles, and enable full redundancy and failover handling.',
     image: pmsImg,
   },
   {
     title: 'Lighting and Entertainment Systems',
-    description: 'Custom mood lighting and AV integration for luxurious onboard experiences.',
+    description:
+      'Custom mood lighting and AV integration for luxurious onboard experiences. From DMX-controlled ambient lighting to centralized multimedia servers, we design immersive systems that blend aesthetics, comfort, and state-of-the-art marine technology.',
     image: lightingImg,
   },
   {
     title: 'Testing & Diagnostics',
     description:
-      'From harmonics to load analysis, our tools pinpoint faults quickly and effectively.',
+      'From harmonics to load analysis, our tools pinpoint faults quickly and effectively. We provide commissioning, troubleshooting, and electrical health checks using certified test instruments and detailed reports for insurance and compliance audits.',
     image: testingImg,
   },
 ])
+
 </script>
 
 <style scoped>
