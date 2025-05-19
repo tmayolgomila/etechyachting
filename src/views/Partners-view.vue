@@ -68,12 +68,6 @@ const partners = ref([
     description: 'Compact energy control systems designed without PLCs for marine applications.',
   },
   {
-    name: 'EATON',
-    logo: new URL('@/assets/partners/eaton-logo.jpg', import.meta.url).href,
-    description:
-      'SmartWire-DT enabled partner, creators of the BLUEWAVE™ intelligent switchboards.',
-  },
-  {
     name: 'EDITRON (Danfoss)',
     logo: new URL('@/assets/partners/editron.png', import.meta.url).href,
     description: 'Electric drivetrain systems for efficient, durable marine propulsion.',
