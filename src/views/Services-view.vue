@@ -22,7 +22,10 @@
           <div class="service-full-text text-white px-4 py-5 text-center text-md-start">
             <div class="container">
               <h3 class="fw-bold mb-3">{{ service.title }}</h3>
-              <p class="text-ety-light m-0">{{ service.description }}</p>
+              <p class="text-ety-light">{{ service.description }}</p>
+              <ul class="text-ety-light ps-3">
+                <li v-for="(point, i) in service.bullets" :key="i">{{ point }}</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -57,45 +60,73 @@ const getAosDirection = (index) => {
 const services = ref([
   {
     title: 'Shore Power Converters',
-    description:
-      'Partnered with ASEA for eco-efficient shore converters and safe isolation systems. We supply, install, and maintain frequency and voltage converters adapted to international marina standards, ensuring seamless energy transition and safety onboard.',
+    description: 'High-performance frequency and voltage conversion systems designed to meet the demands of global marinas and onboard energy efficiency.',
+    bullets: [
+      'ASEA converters supply and installation',
+      'Isolation transformers and shore protection systems',
+      'Integration with hybrid and electric propulsion architectures',
+    ],
     image: aseaImg,
   },
   {
     title: 'Electrical Design & Installations',
-    description:
-      'Design and implementation of modular, adaptive electrical systems tailored to vessel size and complexity. We deliver turnkey installations, retrofit upgrades, and engineering packages fully compliant with class requirements and optimized for performance and reliability.',
+    description: 'Complete turnkey engineering for electrical systems, from concept to commissioning.',
+    bullets: [
+      'Load calculations and schematic development',
+      'Full system layout and technical documentation',
+      'Class-compliant wiring, routing, and installation',
+    ],
     image: electricalImg,
   },
   {
     title: 'Alarm Monitoring Systems (AMS)',
-    description:
-      'Custom AMS solutions that integrate with legacy systems for streamlined control and monitoring. Our in-house developed BLUEWAVE™ AMS offers real-time supervision, intuitive touch interfaces, and scalable architecture for yachts of all sizes.',
+    description: 'Real-time critical system supervision with custom AMS/HMI integration through our BLUEWAVE™ platform.',
+    bullets: [
+      'Real-time alarms with trend logging and reporting',
+      'Intuitive touchscreen control panels',
+      'Remote access and class-approved safety features',
+    ],
     image: amsImg,
   },
   {
     title: 'Switchboards, Panels, and Automation',
-    description:
-      'BLUEWAVE™ certified panels aligned with DNV and SOLAS standards for seamless integration. We engineer and assemble main switchboards, sub-distribution panels, PLC-based control units, and automation solutions tailored to onboard machinery and hotel systems.',
+    description: 'Design, assembly, and commissioning of marine-grade control and distribution boards.',
+    bullets: [
+      'BLUEWAVE™ DNV/SOLAS-certified panels',
+      'PLC automation and remote diagnostics',
+      'Seamless integration with propulsion, HVAC, and utility systems',
+    ],
     image: switchboardImg,
   },
   {
     title: 'Power Management Systems',
-    description:
-      'Advanced diagnostics using thermal imaging and analyzers to identify and resolve energy issues. We configure and fine-tune power management logic to maximize efficiency, reduce generator load cycles, and enable full redundancy and failover handling.',
+    description: 'Optimized onboard power control to maximize energy efficiency and system reliability.',
+    bullets: [
+      'Generator synchronization and load balancing',
+      'Shore-to-generator transition logic',
+      'Thermal imaging and harmonic analysis for diagnostics',
+    ],
     image: pmsImg,
   },
   {
-    title: 'Lighting and Entertainment Systems',
-    description:
-      'Custom mood lighting and AV integration for luxurious onboard experiences. From DMX-controlled ambient lighting to centralized multimedia servers, we design immersive systems that blend aesthetics, comfort, and state-of-the-art marine technology.',
-    image: lightingImg,
+    title: 'Testing & Diagnostics',
+    description: 'Certified electrical testing services to ensure system performance and safety compliance.',
+    bullets: [
+      'Load bank and insulation resistance testing (Megger)',
+      'Thermographic inspections and power quality audits',
+      'Pre-classification inspections and reporting',
+    ],
+    image: testingImg,
   },
   {
-    title: 'Testing & Diagnostics',
-    description:
-      'From harmonics to load analysis, our tools pinpoint faults quickly and effectively. We provide commissioning, troubleshooting, and electrical health checks using certified test instruments and detailed reports for insurance and compliance audits.',
-    image: testingImg,
+    title: 'Lighting and Entertainment Systems',
+    description: 'Custom ambiance and AV control for luxury yachts and refit projects.',
+    bullets: [
+      'Dimmable lighting and DMX automation',
+      'Centralized AV and multimedia distribution',
+      'Touch control interfaces and scene management',
+    ],
+    image: lightingImg,
   },
 ])
 
